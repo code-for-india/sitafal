@@ -1,0 +1,42 @@
+<div class="form-left-col">
+	<label>Severity</label>
+	<input name="severity" type="number" value="{{project.severity}}">
+
+	<label>Date</label>
+	<input name="datetime" type="text" value="{{project.datetime}}" >
+
+	<label>Address</label>
+	<textarea class="span5" name="address" type="text" rows=4>{{project.address}}</textarea>
+
+	<label>Number of Fatalities</label>
+	<input class="span1" name="fatalities" type="text" value="{{project.fatalities}}" >
+
+	<label>Number of Injured</label>
+	<input class="span1" name="injured" type="text" value="{{project.injured}}" >
+
+	<label>Additional Information</label>
+	<textarea class="span5" name="additionalInfo" type="text" rows=4>{{project.additionalinfo}}</textarea>
+
+	<br/>
+	<div style="padding-top:30px;">
+	<a href="#/" class="btn btn-primary btn-success">Back</a>
+	</div>
+</div>
+
+<div class="form-right-col">
+	<table>
+		<tbody>
+			<tr>
+				<td>http://localhost/try/uploads/xxx123-20140510073759.jpg</td>
+				<td>http://localhost/try/uploads/xxx123-20140510073753.jpg</td>
+			</tr>
+			<tr>
+				<td>http://localhost/try/uploads/xxx123-20140510073748.jpg</td>
+				<td>http://localhost/try/uploads/xxx123-20140510073726.jpg</td>
+			</tr>
+		</tbody>
+	</table>
+	<img width="160px" height="240px" ng-src="data:image/jpg;base64, {{project.image}}">
+</div>
+
+

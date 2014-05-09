@@ -1,0 +1,24 @@
+body {
+	padding-top:60px;
+}
+
+#listview {
+	position: absolute;
+	left: 10px;
+	width: 400px;
+	overflow-y:scroll;
+}
+
+#detailview {
+	position: absolute;
+	left: 440px;
+}
+
+.form-left-col {
+	width: 400px;
+	float: left;
+}
+
+.form-right-col {
+	
+}
