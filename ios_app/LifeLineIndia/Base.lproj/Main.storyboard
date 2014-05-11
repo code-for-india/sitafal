@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller - First-->
+        <scene sceneID="W3I-pn-N6e">
+            <objects>
+                <viewController title="First" id="CZ4-MO-1fc" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fRe-49-NCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="yML-WF-EmN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SITA" id="2tX-H6-vDU">
+                        <barButtonItem key="leftBarButtonItem" title="Help" id="1fm-Fc-5aR">
+                            <connections>
+                                <action selector="incidentInfo:" destination="CZ4-MO-1fc" id="Qml-Tj-jSZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Report" id="7RD-w9-QCv">
+                            <connections>
+                                <action selector="reportIncident:" destination="CZ4-MO-1fc" id="4m1-ga-i2j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2231" y="-138"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DvS-IW-OKo" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
+                        <segue destination="G7p-Sj-jEE" kind="relationship" relationship="viewControllers" id="29C-OM-iHr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="180"/>
+        </scene>
+        <!--View Controller - SITA-->
+        <scene sceneID="m0U-vM-W6D">
+            <objects>
+                <viewController id="O7u-M9-qZ1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SdZ-LK-CRW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAy-M2-hsy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T8l-54-FAt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8R-QF-ydx">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="518"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">The Government of India (GOI) passed the Right to Education (RTE) Act in 2009, legislating free and compulsory education for all children between 6-14 years of age. The RTE Act makes specific provisions for parents and local communities to play a role in shaping the school through School Management Committees and School Development Plans. The Act mandates the provision of basic school infrastructure like classroom for every teacher, compound wall, ramps, clean and functional toilets, drinking water facilities etc.
+
+Though there has been progress in improving school infrastructure, and the District Information System for Education (DISE) provides data on school infrastructure, such information is collected annually, and can be erroneous. Data not provided in a timely manner prevents action being taken on improvement or maintenance of infrastructure.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SITA" id="Oae-ss-NKS"/>
+                    <connections>
+                        <outlet property="view" destination="T8l-54-FAt" id="RnG-Kn-l0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1e-vy-WoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="-488"/>
+        </scene>
+        <!--Navigation Controller - Location-->
+        <scene sceneID="3mO-ZY-x98">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DvS-IW-OKo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Location" image="map-marker.png" id="u1e-5L-l1D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K7Y-Ga-qbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                            <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CZ4-MO-1fc" kind="relationship" relationship="rootViewController" id="P8J-ei-Vpg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwE-Jn-MxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="-138"/>
+        </scene>
+        <!--Report View Controller-->
+        <scene sceneID="8kQ-bT-h41">
+            <objects>
+                <viewController storyboardIdentifier="ReportView" id="whd-S0-mk2" customClass="ReportViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9O2-DP-jVY"/>
+                        <viewControllerLayoutGuide type="bottom" id="mK8-EJ-fkB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MLB-Mv-vtJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ig5-61-OLD">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8E6-Cb-8MV">
+                            <connections>
+                                <action selector="closeView:" destination="whd-S0-mk2" id="QfN-2N-cWD"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dJN-Iw-0nM">
+                            <rect key="frame" x="80" y="7" width="160" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="1"/>
+                                <segment title="2"/>
+                                <segment title="3"/>
+                                <segment title="4"/>
+                                <segment title="5"/>
+                                <segment title="6"/>
+                                <segment title="7"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentSwitch:" destination="whd-S0-mk2" eventType="valueChanged" id="cuT-Z7-Y0O"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="hh1-kn-ZQk">
+                            <connections>
+                                <action selector="sendReport:" destination="whd-S0-mk2" id="IHk-Sw-NH7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentControl" destination="dJN-Iw-0nM" id="Brb-90-4iA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLl-5v-MiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Mdl-Qt-DBy">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="293" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="axQ-qU-Cih">
+            <objects>
+                <navigationController storyboardIdentifier="ReportNav" automaticallyAdjustsScrollViewInsets="NO" id="edh-eM-5k4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SHF-hw-XQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="whd-S0-mk2" kind="relationship" relationship="rootViewController" id="Wkz-VW-s2l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRf-sv-hHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592" y="184"/>
+        </scene>
+        <!--Navigation Controller - Help-->
+        <scene sceneID="18B-hO-B8H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G7p-Sj-jEE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Help" image="book.png" id="Unb-ep-noL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lbV-Jg-Iha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                            <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O7u-M9-qZ1" kind="relationship" relationship="rootViewController" id="VGc-CE-Tpl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGv-xA-ta6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-488"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.png" width="18" height="26"/>
+        <image name="map-marker.png" width="16" height="26"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
