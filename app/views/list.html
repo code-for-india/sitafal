@@ -8,26 +8,54 @@
     </th> 
   </tr>
   <tr>
-    <th>Severity</th>
+    <th>Rating</th>
+    <th>Name</th>
     <th>Address</th>
-    <th>Date</th>
-    <th>Fatalities</th>
-    <th>Injured</th>
+    <th>City</th>
+    <th>State</th>
+    <th>R</th>
+    <th>T</th>
+    <th>D</th>
+    <th>P</th>
+    <th>L</th>
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="project in projects | orderByPriority | filter:search | orderBy:'datetime':true">
-    <td ng-switch on ="{{project.severity}}">
-      <span ng-switch-when="">TBD</span> 
-      <span ng-switch-when="0">TBD</span> 
-      <span ng-switch-when="1">High</span> 
-      <span ng-switch-when="2">Medium</span> 
-      <span ng-switch-when="3">Low</span> 
+  <tr ng-repeat="project in projects | filter:search">
+    <td ng-switch on ="{{project.rating}}">
+      <span ng-switch-when="1" style="color:green;">Good</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">Average</span> 
+      <span ng-switch-when="3" style="color:red;">Bad</span> 
     </td>
-    <td><a href="#/details/{{project.$id}}">{{project.address}}</a></td>
-    <td>{{project.datetime}}</td>
-    <td>{{project.fatalities}}</td>
-    <td>{{project.injured}}</td>
+    <td><a href="#/details/{{project.$id}}">{{project.name}}</a></td>
+    <td>{{project.address}}</a></td>
+    <td>{{project.city}}</td>
+    <td>{{project.state}}</td>
+    <td ng-switch on="{{project.R}}">
+      <span ng-switch-when="1" style="color:green;">&#9608;</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">&#9608;</span> 
+      <span ng-switch-when="3" style="color:red;">&#9608;</span> 
+    </td>
+    <td ng-switch on="{{project.T}}">
+      <span ng-switch-when="1" style="color:green;">&#9608;</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">&#9608;</span> 
+      <span ng-switch-when="3" style="color:red;">&#9608;</span> 
+    </td>
+    <td ng-switch on="{{project.D}}">
+      <span ng-switch-when="1" style="color:green;">&#9608;</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">&#9608;</span> 
+      <span ng-switch-when="3" style="color:red;">&#9608;</span> 
+    </td>
+    <td ng-switch on="{{project.P}}">
+      <span ng-switch-when="1" style="color:green;">&#9608;</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">&#9608;</span> 
+      <span ng-switch-when="3" style="color:red;">&#9608;</span> 
+    </td>
+    <td ng-switch on="{{project.L}}">
+      <span ng-switch-when="1" style="color:green;">&#9608;</span> 
+      <span ng-switch-when="2" style="color:#E1C61E;">&#9608;</span> 
+      <span ng-switch-when="3" style="color:red;">&#9608;</span> 
+    </td>
     <td>
       <a href="#/edit/{{project.$id}}"><i class="icon-pencil"></i></a>
     </td>

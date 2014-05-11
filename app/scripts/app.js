@@ -1,13 +1,15 @@
 'use strict';
 
-angular.module('project', ['ngRoute', 'firebase'])
- 
-.value('fbURL', 'https://crackling-fire-5203.firebaseio.com/')
- 
-.factory('Projects', function($firebase, fbURL) {
-  return $firebase(new Firebase(fbURL));
-})
- 
+angular.module('project', ['ngRoute', 'ngResource'])
+
+.factory('Project', ['$resource',
+    function($resource){
+    return $resource('projects.json', {}, {
+    //return $resource('http://sita-india.appspot.com/realget', {}, {
+      query: {method:'GET', params:'', isArray:true}
+    });
+  }])
+
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -32,14 +34,18 @@ angular.module('project', ['ngRoute', 'firebase'])
     .when('/contactus', {
       templateUrl:'views/contactus.html'
     })
+    .when('/uploadreport', {
+      templateUrl:'views/uploadreport.html'
+    })
     .otherwise({
       redirectTo:'/'
     });
 })
  
-.controller('ListCtrl', function($scope, Projects) {
-  $scope.projects = Projects;
-})
+.controller('ListCtrl', ['$scope', 'Project',
+    function($scope, Project) {
+  $scope.projects = Project.query();
+}])
  
 .controller('CreateCtrl', function($scope, $location, $timeout, Projects) {
   $scope.save = function() {

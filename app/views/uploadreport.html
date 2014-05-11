@@ -1,0 +1,204 @@
+<form class="form-horizontal">
+
+
+<div style="width:600px;float:left;">
+<fieldset>
+  <legend> School Information</legend>
+  <label> School Name </label>
+  <input type="text" id="name" placeholder="School Name" class="span6">
+  <br/>
+
+  <label> School Address </label>
+  <input type="text" placeholder="Address" id="address" class="span6 input-large"><br/>
+  <input type="text" placeholder="City" id="city">
+  <input type="text" placeholder="Taluk" id="taluk">
+  <input type="text" placeholder="District" id="district">
+  <input type="text" placeholder="State" id="state">
+  <input type="text" placeholder="Pin Code" id="pin">
+</fieldset>
+</div>
+
+<div style="left:650px;">
+<fieldset>
+  <legend> Submitter Information</legend>
+  <label> Name </label>
+  <input type="text" placeholder="Optional" id="name">
+  <br>
+
+  <label> Mobile</label>
+  <input type="text" placeholder="Optional" id="mobile">
+
+</fieldset>
+</div>
+
+<div style="clear:both;margin-top:100px;">
+
+<fieldset>
+  <legend>Ramp Access Condition</legend>
+
+  <button class="btn btn-primary" type="button" id="upload_toilet_pic">Upload Ramp Access Photo</button>
+     <br> <br>
+
+  <label class="radio"> Ramps with right incline and even surfaces available
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="all_right" checked>
+
+</label>
+
+  <label class="radio"> Ramps available, but not usable / accessible
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="not_all_right" checked>
+      <label class="checkbox">Uneven surface<input type="checkbox" name="toilet_Check1"> </label>
+      <label class="checkbox">Wrong incline  <input type="checkbox" name="toilet_Check2"> </label>
+      <label class="checkbox">No handrails <input type="checkbox" name="toilet_Check2"> </label>
+      <label class="checkbox">Blocked by storage<input type="checkbox" name="toilet_Check2"> </label>
+</label>
+
+<label class="radio"> Ramp does not exist
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="nothing" checked>
+</label>
+
+</fieldset>
+<br/>
+
+<fieldset>
+  <legend>Toilets Condition</legend>
+
+  <button class="btn btn-primary" type="button" id="upload_toilet_pic">Upload Toilet Facility Pic</button>
+     <br> <br>
+
+  <label class="radio"> Toilets have working doors, sewage and sufficient water for cleaning up, and is accessible to all children.
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="all_right" checked>
+
+</label>
+
+  <label class="radio"> Toilets being used, but maintenance is not proper
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="not_all_right" checked>
+      <label class="checkbox"> Dirty <input type="checkbox" name="toilet_Check1"> </label>
+      <label class="checkbox"> Broken doors / taps etc. <input type="checkbox" name="toilet_Check2"> </label>
+</label>
+
+
+  <label class="radio"> Toilets are there, but not functional
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="all_right" checked>
+      <label class="checkbox"> No door <input type="checkbox" name="toilet_Check_sucky1"> </label>
+      <label class="checkbox"> Lock on door missing <input type="checkbox" name="toilet_Check_sucky2"> </label>
+      <label class="checkbox"> No water <input type="checkbox" name="toilet_Check_sucky3"> </label>
+      <label class="checkbox"> No sewage mechanism <input type="checkbox" name="toilet_Check_sucky4"> </label>
+
+</label>
+
+<label class="radio"> 
+
+Toilets not available
+
+      <input type="radio" name="toiletRadio" id="toiletRadio1" value="nothing" checked>
+
+</label>
+
+</fieldset>
+
+<br>
+
+<fieldset>
+  <legend> Drinking Water Condition</legend>
+
+  <button class="btn btn-primary" type="button" id="upload_water_pic">Upload Drinking Water Facility Pic</button>
+     <br> <br>
+
+  <label class="radio"> Clean drinking water available to for all studetns
+      <input type="radio" name="waterRadio" id="waterRadio1" value="all_right" checked>
+
+</label>
+
+  <label class="radio"> Drinking water taps installed, but not used
+
+      <input type="radio" name="waterRadio" id="waterRadio2" value="not_all_right" >
+      <label class="checkbox"> No water supply <input type="checkbox" name="water_Check1"> </label>
+      <label class="checkbox"> Broken doors / taps etc. <input type="checkbox" name="water_Check2"> </label>
+      <label class="checkbox"> Taps are not easily accessible (blocked, wrong height etc.) <input type="checkbox" name="water_Check3"> </label>
+
+</label>
+
+<label class="radio"> 
+
+Drinking water facility not available
+
+      <input type="radio" name="waterRadio" id="waterRadio3" value="nothing" >
+
+</label>
+
+<br>
+</fieldset>
+
+
+<fieldset>
+  <legend> Playground Condition</legend>
+
+  <button class="btn btn-primary" type="button" id="upload_playground_pic">Upload Playground Pic</button>
+     <br> <br>
+
+  <label class="radio"> Well-maintained and used by children
+      <input type="radio" name="playgroundRadio" id="playgroundRadio1" value="all_right" checked>
+
+</label>
+
+  <label class="radio"> Space exists, but not usable
+
+      <input type="radio" name="playgroundRadio" id="playgroundRadio2" value="not_all_right" >
+      <label class="checkbox"> Rocky ground <input type="checkbox" name="playground_Check1"> </label>
+      <label class="checkbox"> Uneven <input type="checkbox" name="playground_Check2"> </label>
+      <label class="checkbox"> Used for other purposes <input type="checkbox" name="water_Check3"> </label>
+
+</label>
+
+<label class="radio"> 
+
+Playground does not exist
+
+      <input type="radio" name="playgroundRadio" id="playgroundRadio3" value="nothing" >
+
+</label>
+
+<br>
+</fieldset>
+
+
+
+<fieldset>
+  <legend> Library Condition</legend>
+    <button class="btn btn-primary" type="button" id="upload_lib_pic">Upload Library Pic</button>
+     <br> <br>
+
+  <label class="radio">Well-stocked library that is accessible to children
+
+      <input type="radio" name="libraryRadio" id="libraryRadio1" value="all_right" checked>
+
+</label>
+
+  <label class="radio"> Library facility is available, but not accessible or not sufficient
+
+      <input type="radio" name="libraryRadio" id="libraryRadio2" value="not_all_right" >
+      <label class="checkbox"> Locked <input type="checkbox" name="library_Check1"> </label>
+      <label class="checkbox"> Books beyond student's reach <input type="checkbox" name="library_Check2"> </label>
+      <label class="checkbox"> No time allotted in the time-table <input type="checkbox" name="library_Check3"> </label>
+      <label class="checkbox"> Insufficient number of books <input type="checkbox" name="library_Check4"> </label>
+
+</label>
+
+<label class="radio"> 
+
+Library facility is not available.
+
+      <input type="radio" name="libraryRadio" id="libraryRadio3" value="nothing" >
+
+</label>
+
+<br>
+</fieldset>
+</div>
+
+<div style="clear:both;">
+  <a href="#/" class="btn">Cancel</a> 
+  <button ng-click="save()" ng-disabled="myForm.$invalid"
+          class="btn btn-primary" style="margin-left:20px;">Save</button>
+</div>
+</form>
